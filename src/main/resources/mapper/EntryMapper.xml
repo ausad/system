@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mk.system.mapper.EntryMapper">
+
+    <resultMap id="BaseResultMap" type="com.mk.system.pojo.Entry">
+            <id property="entryId" column="entry_id" jdbcType="INTEGER"/>
+            <result property="employeeId" column="employee_id" jdbcType="INTEGER"/>
+            <result property="entryDate" column="entry_date" jdbcType="DATE"/>
+            <result property="entryType" column="entry_type" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        entry_id,employee_id,entry_date,
+        entry_type
+    </sql>
+</mapper>

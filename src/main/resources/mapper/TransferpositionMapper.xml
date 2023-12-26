@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mk.system.mapper.TransferpositionMapper">
+
+    <resultMap id="BaseResultMap" type="com.mk.system.pojo.Transferposition">
+            <id property="transferId" column="transfer_id" jdbcType="INTEGER"/>
+            <result property="employeeId" column="employee_id" jdbcType="INTEGER"/>
+            <result property="previousJobId" column="previous_job_id" jdbcType="INTEGER"/>
+            <result property="newJobId" column="new_job_id" jdbcType="INTEGER"/>
+            <result property="transferDate" column="transfer_date" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        transfer_id,employee_id,previous_job_id,
+        new_job_id,transfer_date
+    </sql>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mk.system.mapper.JobsMapper">
+
+    <resultMap id="BaseResultMap" type="com.mk.system.pojo.Jobs">
+            <id property="jobId" column="job_id" jdbcType="INTEGER"/>
+            <result property="jobTitle" column="job_title" jdbcType="VARCHAR"/>
+            <result property="salary" column="salary" jdbcType="DECIMAL"/>
+            <result property="responsibilities" column="Responsibilities" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        job_id,job_title,salary,
+        Responsibilities
+    </sql>
+</mapper>

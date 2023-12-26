@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mk.system.mapper.EmployeesMapper">
+
+    <resultMap id="BaseResultMap" type="com.mk.system.pojo.Employees">
+            <id property="employeeId" column="employee_id" jdbcType="INTEGER"/>
+            <result property="employeeName" column="employee_name" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="departmentId" column="department_id" jdbcType="INTEGER"/>
+            <result property="jobId" column="job_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        employee_id,employee_name,gender,
+        address,phone,
+        email,department_id,job_id
+    </sql>
+
+    <delete id="deleteByDeptId">
+        delete from dbpms.tbemployees where department_id=#{departmentId}
+    </delete>
+    <delete id="deleteByJobId">
+        delete from dbpms.tbemployees where job_id=#{jobId}
+    </delete>
+</mapper>
